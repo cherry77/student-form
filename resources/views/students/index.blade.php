@@ -21,12 +21,12 @@
                     <td>{{$item->sid}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->age}}</td>
-                    <td>{{$item->sex}}</td>
+                    <td>{{$item->getSex($item->sex)}}</td>
                     <td>{{date('Y-m-d H:i:s',$item->created_at)}}</td>
                     <td>
-                        <a href="">详情</a>
-                        <a href="">修改</a>
-                        <a href="">删除</a>
+                        <a href="{{url('student/detail',['sid' => $item->sid])}}">详情</a>
+                        <a href="{{url('student/edit',['sid' => $item->sid])}}">修改</a>
+                        <a href="{{url('student/delete',['sid' => $item->sid])}}" onclick="if(confirm('确定删除吗？') == false) return false;">删除</a>
                     </td>
                 </tr>
             @endforeach

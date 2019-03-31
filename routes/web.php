@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::any('student/index',['uses' => 'StudentsController@index']);
 Route::any('student/create',['uses' => 'StudentsController@create']);
 Route::any('student/save',['uses' => 'StudentsController@save']);
+Route::any('student/edit/{sid}',['uses' => 'StudentsController@edit']);
+Route::any('student/detail/{sid}',['uses' => 'StudentsController@detail']);
+Route::any('student/delete/{sid}',['uses' => 'StudentsController@delete']);
