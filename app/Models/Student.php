@@ -9,9 +9,9 @@ class Student extends Model{
     const SEX_GIRL = 2;//女
 
     protected $table = "student";
-    protected $primaryKey = 'sid';
+    protected $primaryKey = 'id';
 
-    public $timestamps  = true;
+    public $timestamps  = false;
 
     protected $fillable = ['name','age','sex'];
 

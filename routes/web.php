@@ -21,3 +21,11 @@ Route::any('student/save',['uses' => 'StudentsController@save']);
 Route::any('student/edit/{sid}',['uses' => 'StudentsController@edit']);
 Route::any('student/detail/{sid}',['uses' => 'StudentsController@detail']);
 Route::any('student/delete/{sid}',['uses' => 'StudentsController@delete']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
