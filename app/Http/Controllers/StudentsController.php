@@ -55,7 +55,7 @@ class StudentsController extends Controller
            $data = $request->input('Student');
            //用create来新增
            if(Student::create($data)){
-               return redirect('student/index')->with('success','添加成功');
+               return redirect('student.index')->with('success','添加成功');
            }else{
                return redirect()->back();
            }
